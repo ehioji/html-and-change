@@ -1,4 +1,4 @@
-function greet () {
-    alert("Hello!");
+function onClick () {
+    
 };
 
