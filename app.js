@@ -6,15 +6,19 @@ function transform () {
     geez.style.padding = "20px";
     randomNumber();
     userInputStuff();
+    compareNumbers();
 };
 
 function randomNumber () {
     deez = document.getElementById("smol_heading");
-    deez.innerHTML = Math.floor(Math.random() * 10);
+    randomNumbah = Math.floor(Math.random() * 10);
+    deez.innerHTML = randomNumbah;
     deez.style.fontSize = "40px";
     deez.style.backgroundColor = "orange";
     deez.style.padding = "20px";
-    deez.style.textAlign = "center"
+    deez.style.textAlign = "center";
+
+    return randomNumbah;
 }
 
 function userInputStuff () {
@@ -27,4 +31,18 @@ function userInputStuff () {
     y.style.backgroundColor = "blue";
     y.style.padding = "30px";
     y.style.textAlign = "center";
+
+    return x;
 };
+
+function compareNumbers () {
+
+    let numb1 = randomNumber();
+    let numb2 = userInputStuff();
+
+    if (numb1 != numb2) {
+        document.getElementById("compare").innerHTML = `OH MY GAWD! ${numb1} is not the same as ${numb2}!`;
+    } else {
+        document.getElementById("compare").innerHTML = `AYY THEY'RE THE SAME!!! ${numb1} is the same as ${numb2}`;
+    }
+}
